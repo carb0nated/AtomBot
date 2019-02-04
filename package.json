@@ -1,0 +1,16 @@
+{
+  "name": "atombot",
+  "version": "1.0.0",
+  "description": "Atom is a Discord bot with lots of features!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fouad Khalaf",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "moment-timezone": "^0.5.23",
+    "nodemon": "^1.18.9"
+  }
+}
