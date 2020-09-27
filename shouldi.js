@@ -10,7 +10,7 @@ module.exports = {
 
 function run(message) {
     let length = message.content.lengh;
-    if (true){
+    if (message.replace(/ /g,'') == "::shouldi"){
         message.channel.send('[Should I?] Ask me a question!');
     } else {
         message.channel.send('The outcome is completely random and you should not take it seriously.');
