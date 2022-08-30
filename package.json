@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.4.2",
-    "moment-timezone": "^0.5.23",
+    "moment-timezone": "^0.5.35",
     "nodemon": "^1.18.9"
   }
 }
