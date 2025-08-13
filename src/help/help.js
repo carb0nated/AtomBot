@@ -1,5 +1,3 @@
-const index = require("./index.js");
-
 module.exports = {
     help: function(message) { 
         help(message);
