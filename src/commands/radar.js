@@ -1,4 +1,4 @@
-const INDEX = require("./index.js");
+const INDEX = require("../index.js");
 
 module.exports = {
     radar: function(message) { 

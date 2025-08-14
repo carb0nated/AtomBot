@@ -1,5 +1,5 @@
-const index = require("./index.js");
-const help = require("./help.js");
+const index = require("../index.js");
+const help = require("../help/help.js");
 
 module.exports = {
     start: function(message, atom) { 
