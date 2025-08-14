@@ -1,4 +1,4 @@
-const index = require("./index.js");
+const index = require("../index.js");
 
 module.exports = {
     main: function(message) { 
@@ -8,5 +8,5 @@ module.exports = {
 
 function main(message) {
     let city = message.content.substring(7);
-    if (city.)
+    //if (city)
 }

@@ -1,6 +1,6 @@
-const index = require("./index.js");
+const index = require("../index.js");
 const Discord = require("discord.js");
-const help = require("./help.js");
+const help = require("../help/help.js");
 const weather = require("weather-js");
 
 module.exports = {
