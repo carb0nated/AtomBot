@@ -1,3 +1,5 @@
+const { EmbedBuilder } = require('discord.js');
+
 module.exports = {
     help: function(message) { 
         help(message);
@@ -76,17 +78,37 @@ More will be coming soon! Send me your ideas!
     message.channel.send(helpList);
 }
 
-//${index.atom.ping} ${index.atom.status}
+
+
 function status(message, atom) {
-    message.channel.send(`
-AtomBot version 0.1.0.
-Currently running with a ping of ${atom.ping}
-And with status ${atom.status}
-`);
+    message.reply('Fetching status...').then(sent => {
+        const embed = new EmbedBuilder()
+            .setColor('#00ff55')
+            .setTitle('📊 Status')
+            .addFields([
+                { name: 'Version', value: '0.2.1' },
+                { name: 'Ping', value: `${atom.ws.ping}ms` },
+                { name: 'Status', value: `${atom.user.presence.status}` }
+            ])
+            .setTimestamp();
+
+        sent.edit({ content: null, embeds: [embed] });
+    });
 }
 
 function ping(message, atom) {
-    message.channel.send(`Ping is: ${atom.ping}ms`);
+    message.reply('Pinging...').then(sent => {
+        const embed = new EmbedBuilder()
+            .setColor('#0099ff')
+            .setTitle('🏓 Pong!')
+            .addFields([
+                { name: 'Latency', value: `${sent.createdTimestamp - message.createdTimestamp}ms` },
+                { name: 'API Latency', value: `${Math.round(atom.ws.ping)}ms` }
+            ])
+            .setTimestamp();
+
+        sent.edit({ content: null, embeds: [embed] });
+    });
 }
 
 function xo(message) {
